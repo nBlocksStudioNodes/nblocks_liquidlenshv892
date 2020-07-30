@@ -17,8 +17,8 @@ private:
     I2C _i2c;
 	
 	// Temporary values to store data received from input
-	uint32_t received_value = 0;
-	uint32_t must_update = 0;
+	uint32_t received_value;
+	uint32_t must_update;
 	
 	// I2C address
 	uint8_t _address;
