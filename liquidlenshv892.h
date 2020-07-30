@@ -6,7 +6,7 @@
 class nBlock_LiquidLensHV892: public nBlockSimpleNode<1> {
 public:
 
-    nBlock_LiquidLensHV892(PinName pinSDA, PinName pinSCL, uint8_t address);
+    nBlock_LiquidLensHV892(PinName pinSDA, PinName pinSCL, uint8_t address, uint8_t initial_value);
     void triggerInput(uint32_t inputNumber, uint32_t value);
 	void endFrame();
 	

@@ -1,14 +1,14 @@
 #include "liquidlenshv892.h"
 
-nBlock_LiquidLensHV892::nBlock_LiquidLensHV892(PinName pinSDA, PinName pinSCL, uint8_t address):
+nBlock_LiquidLensHV892::nBlock_LiquidLensHV892(PinName pinSDA, PinName pinSCL, uint8_t address, uint8_t initial_value):
 	_i2c(pinSDA, pinSCL) {
 	
 	// Store the I2C address
 	_address = address;
 	
 	// Reset values
-	received_value = 0;
-	must_update = 0;	
+	received_value = initial_value;
+	must_update = 1;
 	
 }
 
