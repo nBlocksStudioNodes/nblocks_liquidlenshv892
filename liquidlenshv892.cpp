@@ -13,11 +13,11 @@ nBlock_LiquidLensHV892::nBlock_LiquidLensHV892(PinName pinSDA, PinName pinSCL, u
 }
 
 
-void nBlock_LiquidLensHV892::triggerInput(uint32_t inputNumber, uint32_t value){
+void nBlock_LiquidLensHV892::triggerInput(nBlocks_Message message){
 	// input 0 receives an intensity value in range 0-255
-	if (inputNumber == 0) {
+	if (message.inputNumber == 0) {
 		// Store value
-		received_value = value;
+		received_value = message.intValue;
 		// Set flag so we update the lens at the end of frame
 		must_update =  1;
 	}
