@@ -1,5 +1,5 @@
 {
-    "category": "Sensor",
+    "category": "Hardware",
     "inputs": 1, 
     "name": "LiquidLensHV892", 
     "parameters": [
